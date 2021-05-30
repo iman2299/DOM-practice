@@ -1,0 +1,24 @@
+document.getElementsByTagName('h1')[0].innerHTML = 'Main Content Here';
+const paragraphs = document.querySelectorAll('main p');
+for (const paragraph of paragraphs) {
+	paragraph.classList.add('purple-text');
+}
+const nav = document.getElementsByTagName('nav')[0];
+nav.insertAdjacentHTML('afterbegin', '<a href="#">Link 1</a>');
+nav.insertAdjacentHTML('beforeend', '<a href="#">Link 7</a>');
+nav.children[3].insertAdjacentHTML('beforebegin', '<a href="#">Link 4</a>');
+const aside = document.querySelector('aside');
+aside.innerHTML = `
+	<div class="red-text1">
+		<h4>Title 1</h4>
+		<p>Comment 1</p>
+	</div>
+	<div class="blue-text1">
+		<h4>Title 2</h4>
+		<p>Comment 2</p>
+	</div>
+	<div class="green-text1">
+		<h4>Title 3</h4>
+		<p>Comment 3</p>
+	</div>
+`;
